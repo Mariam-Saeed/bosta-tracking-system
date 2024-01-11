@@ -1,0 +1,37 @@
+/* //* Navbar styles */
+nav {
+  margin: 40px 0 20px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: aqua; */
+}
+
+.logo {
+  width: 111px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 60%;
+}
+
+nav ul li {
+  width: fit-content;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #4f5665;
+  transition: 0.2s;
+}
+
+nav ul li a:hover {
+  color: rgb(227, 6, 19);
+}
+
+.drop-down {
+  display: none;
+}
