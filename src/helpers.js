@@ -18,7 +18,7 @@ const formatDate = (date) => {
     'Sunday',
     'Monday',
     'Tuesday',
-    'WednesDay',
+    'Wednesday',
     'Thursday',
     'Friday',
     'Saturday',
@@ -26,10 +26,16 @@ const formatDate = (date) => {
 
   const d = new Date(date);
 
-  let month = months[d.getMonth()];
-  let day = days[d.getDay()];
+  const month = months[d.getMonth()];
+  const day = days[d.getDay()];
 
-  const formatedDate = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+  const dayNo = d.getDate();
+  const monthNo = d.getMonth() + 1;
+  const yearNo = d.getFullYear();
+
+  const formatedDate = `${dayNo < 10 ? '0' + dayNo : '' + dayNo}/${
+    monthNo < 10 ? '0' + monthNo : '' + monthNo
+  }/${yearNo}`;
 
   return { month, day, formatedDate };
 };
