@@ -1,5 +1,6 @@
 /* //* Navbar styles */
 nav {
+  width: 100%;
   margin: 40px 0 20px;
   display: flex;
   justify-content: space-around;
@@ -15,11 +16,12 @@ nav ul {
   justify-content: space-around;
   list-style: none;
   width: 60%;
+  flex-wrap: wrap;
 }
 
-nav ul li {
+/* nav ul li {
   width: fit-content;
-}
+} */
 
 nav ul li a {
   text-decoration: none;
@@ -32,6 +34,50 @@ nav ul li a:hover {
   color: rgb(227, 6, 19);
 }
 
+.track-shipment {
+  position: relative;
+}
+
 .drop-down {
   display: none;
+  position: absolute;
+  width: 250px;
+  background-color: #fff;
+  padding: 5px;
 }
+
+.track-shipment:hover {
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+}
+
+.track-shipment:hover .drop-down {
+  display: block;
+}
+
+.drop-down input {
+  outline: none;
+  padding: 5px;
+}
+
+.drop-down button {
+  background-color: rgb(227, 6, 19);
+  border: none;
+  width: 20%;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #4f5665;
+}
+
+/* //* Small screens */
+
+/* @media screen and (max-width: 700px) {
+  nav ul {
+    flex-wrap: wrap;
+  }
+} */

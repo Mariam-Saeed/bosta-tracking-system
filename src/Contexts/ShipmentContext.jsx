@@ -1,30 +1,29 @@
-/* eslint-disable react/prop-types */
 import { createContext, useContext, useState } from 'react';
-import { formatDate } from '../helpers';
 
 const URL = 'https://tracking.bosta.co/shipments/track/';
 const ShipmentContext = createContext();
 
-//* 7234258, 13737343, 67151313
 function ShipmentProvider({ children }) {
-  const [shipmentNo, setShipmentNo] = useState(67151313);
-  const [orderStatus, setOrderStatus] = useState('');
-  const [progressValue, setProgressValue] = useState(0);
-  const [lastDate, setLastDate] = useState({});
+  const [shipmentNo, setShipmentNo] = useState('');
+  const [isError, setIsError] = useState();
+  const [response, setResponse] = useState({});
 
   async function fetchShipmentDetails(shipmentNo) {
     try {
       const res = await fetch(`${URL}${shipmentNo}`);
       const data = await res.json();
-      setOrderStatus(
-        data.CurrentStatus.state.toLowerCase().replaceAll('_', '-')
-      );
-      setProgressValue(orderStatus === 'delivered' ? 100 : 75);
-      setLastDate(formatDate(data.CurrentStatus.timestamp));
-      // const date = formatDate(data.CurrentStatus.timestamp);
-      // console.log(date);
+      setIsError(false);
+      setResponse({
+        lastDate: data.CurrentStatus.timestamp,
+        orderStatus: data.CurrentStatus.state
+          .toLowerCase()
+          .replaceAll('_', '-'),
+        expectedDate: data.PromisedDate,
+      });
       console.log(data);
     } catch (error) {
+      setResponse({});
+      setIsError(true);
       console.log(error);
     }
   }
@@ -34,9 +33,8 @@ function ShipmentProvider({ children }) {
       value={{
         shipmentNo,
         setShipmentNo,
-        orderStatus,
-        progressValue,
-        lastDate,
+        response,
+        isError,
         fetchShipmentDetails,
       }}
     >

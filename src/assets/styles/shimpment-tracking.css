@@ -9,6 +9,7 @@
   margin: 20px 0;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .shipment-data p {
@@ -35,17 +36,15 @@
 }
 
 .shipment-track {
-  margin: 20px auto 100px;
+  margin: 20px auto 40px;
   width: 90%;
-  background-color: aqua;
-  position: relative;
+  /* background-color: aqua; */
 }
 
 progress {
   display: block;
   width: 100%;
   height: 20px;
-  /* margin: auto; */
   -webkit-appearance: none;
   appearance: none;
 }
@@ -66,32 +65,12 @@ progress::-webkit-progress-bar {
   background-color: #00ad21;
 }
 
-.shipment-track div {
-  position: absolute;
-  display: block;
-}
-
-.shipment-track div:nth-of-type(1) {
-  left: 0;
-  top: 0;
-}
-
-.shipment-track div:nth-of-type(2) {
-  left: 25%;
-  top: 0;
-}
-
-.shipment-track div:nth-of-type(3) {
-  left: 75%;
-  top: 0;
-}
-
-.shipment-track div:nth-of-type(4) {
-  left: 95%;
-  top: 0;
-}
-
-.icon {
-  width: 50px;
-  background-color: #000;
+.error-msg {
+  width: 40%;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #fecdca;
+  border-radius: 4px;
+  background-color: #fef3f2;
+  font-size: 14px;
 }

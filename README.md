@@ -1,21 +1,38 @@
-# React + Vite
+# Bosta tracking system
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bosta frontend technical assessment
 
-Currently, two official plugins are available:
+## [DEMO](https://bosta-tracking-system.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-api:
-Bosta Shipment tracking GET request here (tracking number to be used: 7234258, 13737343, 67151313 )https://tracking.bosta.co/shipments/track/:trackingNumber
+- [Title](#bosta-tracking-system)
+- [Built with](#built-with)
+- [Installation](#installation)
+- [Run project](#running-the-project)
 
-3- Call the API and handle the response in a similar UI to the one attached here.
+## Built With
 
-4- Build the UI completely responsive and use UI assets similar to the ones inside these images.
+- React js
+- State Management - Context Api
+- Build tool - Vite.
+- External API - Bosta Shipment tracking get request
+- Support for different languages - i18next
 
-5- Data returned in the API is strings in English, please map it to Arabic in any way you think will be better (Make sure your app supports both languages).
+## Installation
 
-6- Use the font name: Cairo (search for it) and make the font weight adjustment similar to the one shown below.
+1. Clone the repo
+   `git clone https://github.com/Mariam-Saeed/bosta-tracking-system`
 
-7- Use React, Redux /Context (or any state management system), and JavaScript or TypeScript in completing this task.
+2. Install NPM packages
+   `npm install`
+
+## Running the project
+
+- To run the project in dev mode
+  `npm run dev`
+
+- To run the project in production mode
+  `npm run build`
+
+- use these shipment numbers to test the project: `7234258`, `13737343`, `67151313`

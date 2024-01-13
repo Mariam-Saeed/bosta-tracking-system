@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "contact": "Contact Sales",
+    "track": "Track Shipment",
+    "login": "Log In",
+    "trackDrop": "Track your shipment",
+    "placeholder": "Tracking No."
+  },
+  "shipmentTracking": {
+    "shipNo": "Shipment number",
+    "last": "Last Update",
+    "name": "Merchant Name",
+    "expected": "Delivery Date",
+    "status": {
+      "delivered": "Shipment delivered",
+      "cancelled": "Shipment cancelled",
+      "notDelivered": "Shipment was not delivered"
+    },
+    "errorMsg": "No record of this tracking number can be found at this time, please check the number and try again later. For further assistance, please contact Customer Service."
+  },
+  "shipmentDetails": {
+    "details": "Shipment Details",
+    "addr": "Delivery Address",
+    "question": "Is there a problem with your shipment ?!",
+    "qBtn": "Report a problem",
+    "table": {
+      "titles": {
+        "branch": "Branch",
+        "date": "Date",
+        "time": "Time",
+        "details": "Details"
+      },
+      "data": {
+        "branch": "Nasr City",
+        "created": "Shipment created",
+        "received": "Package received",
+        "delivery": "Out for delivery"
+      }
+    }
+  }
+}

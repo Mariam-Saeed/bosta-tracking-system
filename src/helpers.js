@@ -1,4 +1,5 @@
 const formatDate = (date) => {
+  // if (date === null) return {};
   const months = [
     'January',
     'February',
@@ -37,7 +38,7 @@ const formatDate = (date) => {
     monthNo < 10 ? '0' + monthNo : '' + monthNo
   }/${yearNo}`;
 
-  return { month, day, formatedDate };
+  return { month, day, formatedDate, yearNo, dayNo };
 };
 
 export { formatDate };
